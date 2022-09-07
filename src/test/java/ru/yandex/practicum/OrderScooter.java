@@ -9,7 +9,7 @@ import org.junit.runners.Parameterized;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+
 import java.util.concurrent.TimeUnit;
 @RunWith(Parameterized.class)
 public class OrderScooter {
@@ -62,17 +62,17 @@ public class OrderScooter {
     }
     @Test
     public void checkOrderScooter(){
-        OrderScooterPage orderScooterOfFirstButton = new OrderScooterPage(driver);
-        orderScooterOfFirstButton.clickOnButtonOfOrder(orderScooterButton);
-        orderScooterOfFirstButton.setDataAboutCustomer(name, surname, address, metro, telephone);
-        orderScooterOfFirstButton.clickOnButtonToGoRentalForm(orderScooterOfFirstButton.goToRentalFormButton);
-        orderScooterOfFirstButton.setValueOnFieldOfDateTransfer(date);
-        orderScooterOfFirstButton.setValueOnFieldOfRentalPeriod(period);
-        orderScooterOfFirstButton.setValueOnFieldOfColorScooter(color);
-        orderScooterOfFirstButton.setValueOnFieldOfComment(comment);
-        orderScooterOfFirstButton.clickOnButtonOfOrderAfterOrderForm();
-        orderScooterOfFirstButton.clickOnButtonOfOrderApprovals();
-        orderScooterOfFirstButton.isDisplayOrderInformation();
+        OrderScooterPage orderScooterPage = new OrderScooterPage(driver);
+        orderScooterPage.clickOnButtonOfOrder(orderScooterButton);
+        orderScooterPage.setDataAboutCustomer(name, surname, address, metro, telephone);
+        orderScooterPage.clickOnButtonToGoRentalForm(orderScooterPage.goToRentalFormButton);
+        orderScooterPage.setValueOnFieldOfDateTransfer(date);
+        orderScooterPage.setValueOnFieldOfRentalPeriod(period);
+        orderScooterPage.setValueOnFieldOfColorScooter(color);
+        orderScooterPage.setValueOnFieldOfComment(comment);
+        orderScooterPage.clickOnButtonOfOrderAfterOrderForm();
+        orderScooterPage.clickOnButtonOfOrderApprovals();
+        orderScooterPage.isDisplayOrderInformation();
 
     }
 }

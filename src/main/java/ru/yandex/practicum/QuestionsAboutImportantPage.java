@@ -41,18 +41,21 @@ public class QuestionsAboutImportantPage {
     By answerOfSeventhQuestion = By.xpath("//div[@id='accordion__panel-6']/p");
     //Ответ на восьмой вопрос в разделе "Вопросы о важном"
     By answerOfEighthQuestion = By.xpath("//div[@id='accordion__panel-7']/p");
+    By cookieButton = By.id("rcc-confirm-button");
 
     public QuestionsAboutImportantPage(WebDriver driver) {
-
         this.driver = driver;
     }
 
     public void clickOnQuestion(By question) {
-
         driver.findElement(question).click();
     }
-    public String getAnswerOfQuestion(By answer) {
 
+    public String getAnswerOfQuestion(By answer) {
         return driver.findElement(answer).getText();
+    }
+
+    public void clickCookieButton(){
+        driver.findElement(cookieButton).click();
     }
 }

@@ -11,9 +11,9 @@ public class OrderScooterPage {
     private String period;
 
     //Кнопка заказать (правый верхний угол возле кнопки "Статус заказа")
-    private final By orderScooterFirstButton = By.xpath("//div[@class='Header_Nav__AGCXC']/button[text()='Заказать']");
+    private final By OrderButtonInUpperCornerOfPage = By.xpath("//div[@class='Header_Nav__AGCXC']/button[text()='Заказать']");
     //Кнопка заказать (после инструкции как работает сервис)
-    private final By orderScooterSecondButton = By.xpath("//div[@class='Home_FinishButton__1_cWm']/button");
+    private final By OrderButtonAtBottomOfPage = By.xpath("//div[@class='Home_FinishButton__1_cWm']/button");
     //Кнопка заказать (после заполнения формы заказа)
     private final By orderScooterAfterFormButton = By.xpath("//div[@class='Order_Buttons__1xGrp']/button[text()='Заказать']");
     //Кнопка согласия оформления заказала
@@ -51,9 +51,9 @@ public class OrderScooterPage {
     //Клик по кнопке "Заказать", если номер кнопки "fitst", то клик по кнопке справа наверху, если номер кнопки "second", то клик по кнопке внизу страницы
     public void clickOnButtonOfOrder(String orderScooterButton) {
         if (Objects.equals(orderScooterButton, "first")) {
-        driver.findElement(orderScooterFirstButton).click();
+        driver.findElement(OrderButtonInUpperCornerOfPage).click();
         } else if (Objects.equals(orderScooterButton, "second")) {
-            driver.findElement(orderScooterSecondButton).click();
+            driver.findElement(OrderButtonAtBottomOfPage).click();
         }
     }
 
