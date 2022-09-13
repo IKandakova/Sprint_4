@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 public class QuestionsAboutImportantPage {
-    private WebDriver driver;
+    private final WebDriver driver;
 
     //Первый вопрос в разделе "Вопросы о важном"
     By firstQuestion = By.id("accordion__heading-0");

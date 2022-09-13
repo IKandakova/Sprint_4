@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 @RunWith(Parameterized.class)
-public class OrderScooter {
+public class orderScooter {
     private WebDriver driver;
     @Before
     public void setup(){
@@ -27,18 +27,18 @@ public class OrderScooter {
         driver.quit();
     }
 
-    private String orderScooterButton;
-    private String name;
-    private String surname;
-    private String address;
-    private String metro;
-    private String telephone;
-    private String date;
-    private String period;
-    private String color;
-    private String comment;
+    private final String orderScooterButton;
+    private final String name;
+    private final String surname;
+    private final String address;
+    private final String metro;
+    private final String telephone;
+    private final String date;
+    private final String period;
+    private final String color;
+    private final String comment;
 
-    public OrderScooter(String orderScooterButton, String name, String surname, String address, String metro, String telephone, String date, String period, String color, String comment) {
+    public orderScooter(String orderScooterButton, String name, String surname, String address, String metro, String telephone, String date, String period, String color, String comment) {
         this.orderScooterButton=orderScooterButton;
         this.name = name;
         this.surname  = surname;
